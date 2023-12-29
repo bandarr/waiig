@@ -89,6 +89,19 @@ func (rs *ReturnStatement) statementNode() {}
 
 func (rs *ReturnStatement) TokenLiteral() string { return rs.Token.Literal }
 
+func (rs *ReturnStatement) String() string {
+	var out bytes.Buffer
+	out.WriteString(rs.TokenLiteral() + " ")
+
+	if rs.ReturnValue != nil {
+		out.WriteString(rs.ReturnValue.String())
+	}
+
+	out.WriteString(";")
+
+	return out.String()
+}
+
 type ExpressionStatement struct {
 	Token      token.Token //the first token of the expression
 	Expression Expression
@@ -97,3 +110,12 @@ type ExpressionStatement struct {
 func (es *ExpressionStatement) statementNode() {}
 
 func (es *ExpressionStatement) TokenLiteral() string { return es.Token.Literal }
+
+func (es *ExpressionStatement) String() string {
+
+	if es.Expression != nil {
+		return es.Expression.String()
+	}
+
+	return ""
+}
