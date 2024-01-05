@@ -183,6 +183,7 @@ func (p *Parser) parseExpressionStatement() *ast.ExpressionStatement {
 	return stmt
 }
 
+//establish precedence enums
 const (
 	_ int = iota
 

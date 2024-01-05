@@ -398,6 +398,6 @@ func TestOperatorPrecendenceParsing( t *testing.T) {
 
 		if actual != tt.expected {
 			t.Errorf("expected=%q, got=%q", tt.expected, actual)
-		}
+		}		
 	}
 }
