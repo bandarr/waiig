@@ -32,3 +32,7 @@ func (b *Boolean) Inspect() string { return fmt.Sprintf("%t", b.Value) }
 type Null struct {}
 func (n *Null) Type() ObjectType { return NULL_OBJ }
 func (n *Null) Inspect() string { return "null" }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9724d78fa593b989ca6d7863e32f25a926ecc456
