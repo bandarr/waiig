@@ -49,6 +49,7 @@ const (
 
 	STRING   = "STRING"
 
+	//Array brackets
 	LBRACKET = "["
 	RBRACKET = "]"
 )
